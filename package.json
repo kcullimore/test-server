@@ -1,0 +1,22 @@
+{
+  "name": "webpack-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcullimore/test-server.git"
+  },
+  "author": "kane@ia.house",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kcullimore/test-server/issues"
+  },
+  "homepage": "https://github.com/kcullimore/test-server#readme",
+  "dependencies": {
+    "webpack": "^4.44.1"
+  }
+}
