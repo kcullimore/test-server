@@ -41,6 +41,11 @@ module.exports = {
        *   use: { loader: "worker-loader" }
        * }, */
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      },
+      {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
       },
