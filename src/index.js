@@ -1,21 +1,28 @@
-import _ from 'lodash'
-import './css/style.css';
-import Diagram from './img/diagram.jpg'
+import "../assets/css/style.css";
+import pdfStyle from "../assets/css/pdf_style.css";
+
+import makeImage from "./makeImage";
+
+import loadPdf from "./loadPdf";
+import jpgImageUrl from "../assets/img/test.jpg";
+import pngImageUrl from "../assets/img/test.png";
+import svgImageUrl from "../assets/img/test.svg";
+
+import pdfImageUrl from "../assets/img/test.pdf";
 
 function component() {
-  const element = document.createElement('div');
-
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-  
+  const element = document.createElement("div");
   // Add the image to our existing div.
-  const myDiagram = new Image();
-  myDiagram.src = Diagram;
+  const newImage = makeImage(svgImageUrl);
+  element.appendChild(newImage);
 
-  element.appendChild(myDiagram);
-  
-  return element; 
+  const canvas = document.createElement("canvas");
+  canvas.id = "theCanvas";
+  element.appendChild(canvas);
+  // Add the image to our existing div.
+  loadPdf(pdfImageUrl);
+
+  return element;
 }
 
 document.body.appendChild(component());
