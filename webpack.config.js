@@ -5,17 +5,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
-  /* entry: {
-   *   main: "./src/index.js",
-   *   "pdf.worker": "pdfjs-dist/build/pdf.worker.entry"
-   * }, */
   mode: "development",
   devtool: "inline-source-map",
   devServer: {
     contentBase: [path.join(__dirname, "dist"), path.join(__dirname, "assets")],
     host: "0.0.0.0",
     port: 9000,
-    hot: true,
     onListening: function(server) {
       const port = server.listeningApp.address().port;
       console.log("Listening on port xxxxx:", port);
@@ -36,15 +31,6 @@ module.exports = {
   },
   module: {
     rules: [
-      /* {
-       *   test: /\.worker\.js$/,
-       *   use: { loader: "worker-loader" }
-       * }, */
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
-      },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]

@@ -39,11 +39,9 @@
 	"webpack-cli": "^3.3.12",
 	"webpack-dev-middleware": "^3.7.2",
 	"webpack-dev-server": "^3.11.0",
-	"webpack-node-externals": "^2.5.1",
-	"worker-loader": "^3.0.1"
+	"webpack-node-externals": "^2.5.1"
     },
     "dependencies": {
-	"lodash": "^4.17.19",
-	"pdfjs-dist": "^2.4.456"
+	"lodash": "^4.17.19"
     }
 }
