@@ -7,7 +7,7 @@ export default function getLayout() {
   document.body.appendChild(element);
 
   let output = calculateLayout(document);
-  let ws = new WebSocket("ws://localhost:9000");
+  let ws = new WebSocket("ws://localhost:3000");
 
   ws.onopen = function(e) {
     console.log("Client WS connection established.");
