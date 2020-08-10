@@ -1,55 +1,55 @@
 {
-    "name": "webpack-project",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-	"watch": "webpack --watch",
-	"client": "webpack-dev-server",
-	"server": "node ./src_server/server.js",
-	"build": "webpack"
-    },
-    "repository": {
-	"type": "git",
-	"url": "git+https://github.com/kcullimore/test-server.git"
-    },
-    "author": "kane@ia.house",
-    "license": "MIT",
-    "devDependencies": {
-	"@babel/core": "^7.11.1",
-	"@babel/preset-env": "^7.11.0",
-	"babel-eslint": "^10.1.0",
-	"babel-loader": "^8.1.0",
-	"clean-webpack-plugin": "^3.0.0",
-	"core-js": "^3.6.5",
-	"css-loader": "^4.2.0",
-	"eslint": "^7.6.0",
-	"eslint-config-prettier": "^6.11.0",
-	"eslint-loader": "^4.0.2",
-	"eslint-plugin-html": "^6.0.2",
-	"eslint-plugin-import": "^2.22.0",
-	"eslint-plugin-prettier": "^3.1.4",
-	"express": "^4.17.1",
-	"file-loader": "^6.0.0",
-	"html-loader": "^1.1.0",
-	"html-webpack-plugin": "^4.3.0",
-	"imports-loader": "^1.1.0",
-	"mini-css-extract-plugin": "^0.9.0",
-	"morgan": "^1.10.0",
-	"multer": "^1.4.2",
-	"prettier": "^2.0.5",
-	"style-loader": "^1.2.1",
-	"url-loader": "^4.1.0",
-	"webpack": "^4.44.1",
-	"webpack-cli": "^3.3.12",
-	"webpack-dev-middleware": "^3.7.2",
-	"webpack-dev-server": "^3.11.0",
-	"webpack-hot-middleware": "^2.25.0",
-	"webpack-node-externals": "^2.5.1"
-    },
-    "dependencies": {
-	"body-parser": "^1.19.0",
-	"ws": "^7.3.1"
-    }
+			"name": "webpack-project",
+			"version": "1.0.0",
+			"description": "",
+			"main": "src_client/index.js",
+			"type": "module",
+			"scripts": {
+						"watch": "webpack --watch",
+						"start": "webpack-dev-server",
+						"server": "node ./src_server/server.js",
+						"build": "webpack"
+			},
+			"repository": {
+						"type": "git",
+						"url": "git+https://github.com/kcullimore/test-server.git"
+			},
+			"author": "kane@ia.house",
+			"license": "MIT",
+			"devDependencies": {
+						"@babel/core": "^7.11.1",
+						"@babel/preset-env": "^7.11.0",
+						"babel-eslint": "^10.1.0",
+						"babel-loader": "^8.1.0",
+						"clean-webpack-plugin": "^3.0.0",
+						"core-js": "^3.6.5",
+						"css-loader": "^4.2.0",
+						"eslint": "^7.6.0",
+						"eslint-config-prettier": "^6.11.0",
+						"eslint-loader": "^4.0.2",
+						"eslint-plugin-html": "^6.0.2",
+						"eslint-plugin-import": "^2.22.0",
+						"eslint-plugin-prettier": "^3.1.4",
+						"express": "^4.17.1",
+						"file-loader": "^6.0.0",
+						"html-loader": "^1.1.0",
+						"html-webpack-plugin": "^4.3.0",
+						"imports-loader": "^1.1.0",
+						"mini-css-extract-plugin": "^0.9.0",
+						"morgan": "^1.10.0",
+						"prettier": "^2.0.5",
+						"style-loader": "^1.2.1",
+						"url-loader": "^4.1.0",
+						"webpack": "^4.44.1",
+						"webpack-cli": "^3.3.12",
+						"webpack-dev-middleware": "^3.7.2",
+						"webpack-dev-server": "^3.11.0",
+						"webpack-hot-middleware": "^2.25.0",
+						"webpack-livereload-plugin": "^2.3.0",
+						"webpack-node-externals": "^2.5.1"
+			},
+			"dependencies": {
+						"body-parser": "^1.19.0",
+						"ws": "^7.3.1"
+			}
 }

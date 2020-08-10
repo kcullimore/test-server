@@ -192,12 +192,6 @@ function calculateLayout(doc) {
   for (i = 0; i < children.length; i++) {
     csv = csv + writeBox(children[i], i + 1, "BODY.1");
   }
-  // Place result in hidden DIV
-  /* var result = document.createElement("div");
-   * result.innerHTML = csv;
-   * result.style.display = "inline";
-   * result.id = "layoutEngineRSeleniumresult";
-   * body.appendChild(result); */
   return csv;
 }
 
