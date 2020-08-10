@@ -1,6 +1,10 @@
 .hello {
   color: green;
 }
-img {
-  width: 200px;
+
+.img-div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }

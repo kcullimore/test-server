@@ -37,28 +37,6 @@ module.exports = (env, argv) => {
     module: {
       rules: [
         {
-          test: /\.js$/,
-          exclude: /(node_modules|bower_components)/,
-          use: [
-            {
-              loader: "babel-loader",
-              options: {
-                presets: [
-                  [
-                    "@babel/preset-env",
-                    {
-                      modules: false,
-                      useBuiltIns: "usage",
-                      targets: "> 0.25%, not dead",
-                      corejs: 3
-                    }
-                  ]
-                ]
-              }
-            }
-          ]
-        },
-        {
           test: /\.html$/i,
           loader: "html-loader"
         },
