@@ -1,11 +1,12 @@
-import { calculateLayout } from "./layoutUtils.js";
-import inputHTML from "../assets/html/input.html";
+import { calculateLayout } from "./js/layoutUtils.js";
+import inputHTML from "./html/input.html";
 
 const element = document.createElement("div");
 element.innerHTML = inputHTML;
 document.body.appendChild(element);
 
 let output = calculateLayout(document);
+
 let ws = new WebSocket("ws://localhost:3000");
 
 ws.onopen = function(e) {
