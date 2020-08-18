@@ -12,8 +12,9 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "public"),
     watchContentBase: true,
-    host: "localhost",
+    host: "0.0.0.0",
     port: 9000,
+    disableHostCheck: true,
     onListening: function(server) {
       const port = server.listeningApp.address().port;
       console.log(`Webpack-dev-server up at http://localhost:${port}`);
