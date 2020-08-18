@@ -1,9 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-// const nodeExternals = require("webpack-node-externals");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-// const HotModuleReplacementPlugin = require("webpack-hot-middleware");
 
 module.exports = {
   entry: {
@@ -12,16 +10,13 @@ module.exports = {
   mode: "development",
   devtool: "inline-source-map",
   devServer: {
-    contentBase: [path.join(__dirname, "dist"), path.join(__dirname, "src")],
+    contentBase: path.join(__dirname, "public"),
+    watchContentBase: true,
     host: "localhost",
     port: 9000,
-    hot: true,
     onListening: function(server) {
       const port = server.listeningApp.address().port;
       console.log(`Webpack-dev-server up at http://localhost:${port}`);
-    },
-    proxy: {
-      "/layout": "http://localhost:3000"
     }
   },
   plugins: [
@@ -30,12 +25,9 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html",
-      favicon: "./src/img/favicon.ico.png"
+      favicon: "./public/img/favicon.ico.png"
     })
-    //    new HotModuleReplacementPlugin()
   ],
-  //  target: "node",
-  //  externals: [nodeExternals()],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",

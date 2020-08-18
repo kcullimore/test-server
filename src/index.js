@@ -1,9 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import inputHTML from "../public/html/input.html";
 import "./css/style.css";
-import App from "./js/App";
 
-const Index = () => {
-  return <App />;
-};
-ReactDOM.render(<Index />, document.getElementById("app"));
+const element = document.createElement("div");
+element.innerHTML = inputHTML;
+document.body.appendChild(element);
